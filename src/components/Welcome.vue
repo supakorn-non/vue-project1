@@ -1,19 +1,19 @@
 <template>
   <div class="app">
     <div class="container">
-    <button type="button" class="pushable signUpBtn">
-      <span class="front">
-        <router-link to="/signUp">Sign Up</router-link>
+    <button type="button" class="pushable signUpBtn" v-on:click="signUp">
+      <span class="front" style="font-family: 'Acme', sans-serif;">
+        Sign Up
       </span>
     </button>
-    <button type="button" class="pushable signInBtn">
-      <span class="front">
+    <button type="button" class="pushable signInBtn" v-on:click="signIn">
+      <span class="front" style="font-family: 'Acme', sans-serif;">
         Sign In
       </span>
     </button>
     <img alt="Vue logo" src="../assets/logo1000.png" width="500" height="400">
-    <h1>Welcome to Quick Quiz</h1>
-    <p>
+    <h1 style="font-family: 'Acme', sans-serif;">Welcome to Quick Quiz</h1>
+    <p style="font-family: 'Acme', sans-serif;">
       for playing quiz games with limited time
     </p>
 
@@ -24,13 +24,19 @@
 
 <script>
 export default {
-
+  methods: {
+    signUp() {
+      window.location = "/signUp"
+    },
+    signIn() {
+      window.location = "/signIn"
+    }
+  }
 }
 </script>
 
 <style>
 .app {
-  font-family: "Brush Script MT", cursive;
   text-align: center;
   color: wheat;
   background-color: #5E17EB;

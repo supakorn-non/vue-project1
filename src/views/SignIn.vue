@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg">
         <login></login>
     </div> 
 </template>
@@ -13,6 +13,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.bg {
+    background-image: url("../assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
 </style>
